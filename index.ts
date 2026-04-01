@@ -98,9 +98,6 @@ function getDirectorySize(dirPath: string): number {
 }
 
 async function main() {
-  console.log("DEBUG → isTTY:", process.stdin.isTTY, process.stdout.isTTY);
-  console.log("DEBUG → cwd:", process.cwd());
-
   intro("🗑️  Node Modules Cleaner");
 
   const targetDir = process.argv[2] ? resolve(process.argv[2]) : process.cwd();
