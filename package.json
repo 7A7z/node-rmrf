@@ -2,7 +2,12 @@
   "name": "node-rmrf",
   "version": "1.0.0",
   "module": "index.ts",
-  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
   "bin": {
     "node-rmrf": "./index.ts",
     "nmrmrf": "./index.ts"
@@ -10,10 +15,8 @@
   "scripts": {
     "start": "bun run index.ts"
   },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
+  "type": "module",
+  "dependencies": {
+    "@clack/prompts": "^1.2.0"
   }
 }
