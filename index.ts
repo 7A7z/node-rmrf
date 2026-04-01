@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 
 import { existsSync, statSync, rmSync, readdirSync } from "fs";
-import { resolve, basename, dirname } from "path";
+import { resolve, basename, dirname, relative } from "path";
 import {
   multiselect,
   isCancel,
@@ -144,7 +144,7 @@ async function main() {
     return {
       label: nm.displayName,
       value: nm.path,
-      hint: `${nm.path} - ${sizeStr}`,
+      hint: `${relative(process.cwd(), nm.path)} - ${sizeStr}`,
     };
   });
 
