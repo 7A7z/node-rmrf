@@ -1,6 +1,6 @@
 {
-  "name": "node-rmrf",
-  "version": "1.0.0",
+  "name": "@7a7z_/node-rmrf",
+  "version": "1.0.1",
   "module": "index.ts",
   "devDependencies": {
     "@types/bun": "latest"
@@ -16,6 +16,9 @@
     "start": "bun run index.ts"
   },
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@clack/prompts": "^1.2.0"
   }
